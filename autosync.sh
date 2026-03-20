@@ -6,7 +6,8 @@ REPO="$HOME/hyprdots"
 
 while true; do 
 	inotifywait -r -e modify,create,delete,move "$WATCH" 
-	
+	sleep 5	
+
 	rsync -a --delete "$WATCH/" "$TARGET/"
 	
 	cd "$REPO" || exit
