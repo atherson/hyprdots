@@ -14,7 +14,7 @@ while true; do
 	
 	git add .
 
-	if ! git diff --cached --quiet; then git commit -m "auto: $(date '+%Y-%m-%d %H:%M:%S')"
+	if ! git diff --cached --quiet; then git commit -m "[ changed_on: $(date '+%Y-%m-%d %H:%M:%S') ]"
 		git push
 	fi
 done
