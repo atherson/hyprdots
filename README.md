@@ -312,5 +312,4 @@ sysctl kernel.unprivieged_userns_clone
 you should see:
 ```kernel.unprivileged_userns_clone = 1```
 
-For any inquiries kindly reach out via [Contact Me](athersonfrank5@gmail.com)
 
