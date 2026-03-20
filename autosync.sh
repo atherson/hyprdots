@@ -1,8 +1,8 @@
 #!/bin/bash
 
 WATCH="$HOME/.config/hypr"
-TARGET="$HOME/hyprdots/Configs/.config/hypr"
-REPO="$HOME/hyprdots"
+TARGET="$HOME/.hyprdots/Configs/.config/hypr"
+REPO="$HOME/.hyprdots"
 
 while true; do 
 	inotifywait -r -e modify,create,delete,move "$WATCH" 
