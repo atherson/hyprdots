@@ -52,11 +52,14 @@ Check if your connected to the internet. Ensure its stable.
 - Enter password: It will prompt you for the passphrase. Type it in and hit Enter.
 - Exit: Type exit or hit Ctrl+D to return to the standard root prompt.
 
-- **TO CONFIRM YOUR CONNECTION, ** Type in:
+- **To confirm your connection, ** Type in:
   ```bash
-  ping -c 4 archlinux.org```
+  ping -c 4 archlinux.org
+  ```
+
 
 ---
+
 
 ## DISK CONFIGURATIONS
 After connecting to the internet type in the following command to have a look at the partitions in your drives.
@@ -134,6 +137,10 @@ Timezone:
 ```bash
 ln -sf /usr/share/zoneinfo/Region/City /etc/localtime
 ```
+eg: 
+```bash
+ln -sf /usr/share/Africa/Kenya/Nairobi /etc/localtime
+```
 
 Localization: Edit 
 ```bash
@@ -148,7 +155,7 @@ by removing ```#``` at the begining of the line, then run
 
 Hostname: 
 ```bash
-echo "my-cool-pc" > /etc/hostname
+echo "what_you_want_to_name" > /etc/hostname
 ```
 
 ## 🔒 Root Password: Type 
