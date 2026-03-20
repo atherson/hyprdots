@@ -41,16 +41,20 @@ Check if your connected to the internet. Ensure its stable.
 
 **WIFI**: If you're on wifi, run the following command ```iwctl```
 
-- a) List your devices: ```device list``` (Usually, your device is named wlan0.)
-- b) Turn on the scan: ```station wlan0 scan```
-- c) List available networks: ```station wlan0 get-networks```
-- d) Connect to your SSID: ```station wlan0 connect YOUR_NETWORK_NAME```
+- List your devices: ```device list``` (Usually, your device is named wlan0.)
+- Turn on the scan: ```station wlan0 scan```
+- List available networks: ```station wlan0 get-networks```
+- Connect to your SSID: ```station wlan0 connect YOUR_NETWORK_NAME```
 - **Tip: If you have a hidden SSID, the command is slightly different:**
-    ```station wlan0 connect-hidden YOUR_NETWORK_NAME```
-- e) Enter password: It will prompt you for the passphrase. Type it in and hit Enter.
-- f) Exit: Type exit or hit Ctrl+D to return to the standard root prompt.
+    ```bash
+      station wlan0 connect-hidden YOUR_NETWORK_NAME
+    ```
+- Enter password: It will prompt you for the passphrase. Type it in and hit Enter.
+- Exit: Type exit or hit Ctrl+D to return to the standard root prompt.
 
-- **TO CONFIRM YOUR CONNECTION, ** Type in: ```ping -c 4 archlinux.org   ```
+- **TO CONFIRM YOUR CONNECTION, ** Type in:
+  ```bash
+  ping -c 4 archlinux.org```
 
 ---
 
@@ -69,11 +73,21 @@ Root Partition: Remainder of the space (Type: Linux root x86-64)
 
 Format the partitions:
 
-EFI: ```mkfs.fat -F 32 /dev/sdX1```
+EFI: 
+```bash
+mkfs.fat -F 32 /dev/sdX1
+```
 
-Swap: ```mkfs.swap /dev/sdX2``` press enter. Followed by ```swapon /dev/sdX2``.
+Swap: 
+```bash 
+mkfs.swap /dev/sdX2
+```
+press enter. Followed by ```swapon /dev/sdX2``.
 
-Root: ```mkfs.ext4 /dev/sdX3```
+Root: 
+```bash
+mkfs.ext4 /dev/sdX3
+```
 
 
 ---
@@ -81,41 +95,85 @@ Root: ```mkfs.ext4 /dev/sdX3```
 ## 🛠️ Mounting and Base Installation
 Now we mount the root partition and install the core of the OS.
 
-Mount Root: ```mount /dev/sdX3 /mnt```
+Mount Root: 
+```bash 
+mount /dev/sdX3 /mnt
+```
 
-Mount EFI: ```mount --mkdir /dev/sdX1 /mnt/boot```
+Mount EFI: 
+```bash
+mount --mkdir /dev/sdX1 /mnt/boot
+```
 
 Install Base Packages:
-```pacstrap /mnt base linux linux-firmware nano grub efibootmgr networkmanager```
+```bash
+pacstrap /mnt base linux linux-firmware nano grub efibootmgr networkmanager
+```
 
 ---
 
 ## 🛠️ Configuring the System
 Generate the filesystem table so your computer knows where your partitions are at boot.
-```genfstab -U /mnt >> /mnt/etc/fstab```
-
+```bash
+genfstab -U /mnt >> /mnt/etc/fstab
+```
 
 You've now instaled archlinux base system. Lets now enter your system and configure it.
 
 
 Enter the new system (Chroot):
-```arch-chroot /mnt```
+```bash
+arch-chroot /mnt
+```
 
 Let's now configure your newly installed system:
 
 Inside the chroot, set your vitals:
 
-```Timezone: ln -sf /usr/share/zoneinfo/Region/City /etc/localtime```
+Timezone: 
+```bash
+ln -sf /usr/share/zoneinfo/Region/City /etc/localtime
+```
 
-Localization: Edit ```/etc/locale.gen```, uncomment ```en_US.UTF-8 UTF-8```, by removing ```#``` at the begining of the line, then run ```locale-gen```.
+Localization: Edit 
+```bash
+/etc/locale.gen
+```
+uncomment 
+```bash
+en_US.UTF-8 UTF-8
+```
+by removing ```#``` at the begining of the line, then run 
+```locale-gen```.
 
-Hostname: ```echo "my-cool-pc" > /etc/hostname```
+Hostname: 
+```bash
+echo "my-cool-pc" > /etc/hostname
+```
 
-Root Password: Type ```passwd``` and follow the prompts.
+## 🔒 Root Password: Type 
+```bash
+passwd
+```
+and follow the prompts.
 
 
 ADDING A USER:
- ```sudo useradd -m -G wheel -s /bin/bash username``` THEN ```sudo passwd username``` TO ADD A PASSWORD THE THE NEW USER. **Optional**, this is to give the user ```sudo``` privileges ```sudo EDITOR=nano visudo```, then uncomment the line ```%wheel ALL=(ALL) ALL```. If visudo fails with "no editor found" install **nano**, a terminal-based text editor by typing ```sudo pacman -S nano```.         
+ ```bash
+ sudo useradd -m -G wheel -s /bin/bash username
+``` 
+ THEN 
+ ```bash
+ sudo passwd username
+```
+to give the new user a password. **Optional**, this is to give the user ```sudo``` privileges 
+```bash 
+sudo EDITOR=nano visudo
+```
+then uncomment the line ```%wheel ALL=(ALL) ALL```. If this fails with "no editor found" install **nano**, a terminal-based text editor by typing 
+```bash
+sudo pacman -S nano
+```         
 
 ---
 
@@ -123,23 +181,29 @@ ADDING A USER:
 Without a bootloader, your BIOS won't know Arch exists.
 
 Install GRUB:
-```grub-install --target=x86_64-efi --efi-directory=/boot --bootloader-id=GRUB```
+```bash
+grub-install --target=x86_64-efi --efi-directory=/boot --bootloader-id=GRUB
+```
 
 Generate Config:
-```grub-mkconfig -o /boot/grub/grub.cfg```
+```bash
+grub-mkconfig -o /boot/grub/grub.cfg
+```
 
 Enable Internet on boot:
-```systemctl enable NetworkManager```
+```bash
+systemctl enable NetworkManager
+```
 
 
 ## 6. The Finish Line
 Exit the chroot, unmount, and reboot:
 
-```exit```
-
-```umount -R /mnt```
-
-```reboot```
+```bash
+exit
+umount -R /mnt
+reboot
+```
 
 
 ## 🛠️ Prerequisites & Installation
@@ -180,7 +244,7 @@ if it fails run this ``` Sudo pacman -S --needed base-devel```
 
 ---
 
-If there are no desktop, downloads, pictures .... directories, download and run this:
+## 📁 If there are no desktop, downloads, pictures .... directories, download and run this:
 ```bash
 sudo pacman -S xdg-user-dirs
 xdg-user-dirs-update
@@ -201,3 +265,20 @@ sudo pacman -S flatpak
 flatpak install com.brave.Browser
 ```
 Then use Windows + F to open brave browser.
+
+## ⌨️ Essential Keybindings
+The default Modifier Key is `Super` (Windows Key).
+
+| Action | Shortcut |
+| :--- | :--- |
+| **Terminal (Kitty)** | `Super` + `T` |
+| **Web Browser (Brave)** | `Super` + `F` |
+| **File Manager (Dolphin)** | `Super` + `E` |
+| **Music (Spotify)** | `Super` + `B` |
+| **Application Launcher** | `Super` + `A` |
+| **Close Window** | `Super` + `Q` |
+| **Toggle Floating** | `Super` + `W` |
+| **Lock Screen** | `Super` + `L` |
+| **Theme Selector** | `Super` + `Shift` + `T` |
+| **Wallpaper Selector** | `Super` + `Shift` + `W` |
+| **Screenshot (Area)** | `Super` + `P` |
