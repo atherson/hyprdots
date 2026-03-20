@@ -1,303 +1,203 @@
-This is my own forked, hyprdots version containing my configurations.
-
-To update HyDE, you will need to pull the latest changes from GitHub and restore the configs by running the following commands:
-
-> [!WARNING]
-> The following commands will discard any uncommitted local changes in the repository.
-
-```shell
-cd ~/HyDE/Scripts
-git fetch --update-shallow --depth 1 origin master
-git reset --hard origin/master
-./install.sh -r
-```
-
-###### _<div align="right"><a id=-design-by-t2></a><sub>// design by t2</sub></div>_
-
-![hyde_banner](Source/assets/hyde_banner.png)
-
-<!--
-Multi-language README support
--->
-<!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-2-orange.svg?style=flat-square)](#contributors-)
-<!-- ALL-CONTRIBUTORS-BADGE:END -->
-[![es](https://img.shields.io/badge/lang-es-yellow.svg)](Source/docs/README.es.md)
-[![de](https://img.shields.io/badge/lang-de-black.svg)](Source/docs/README.de.md)
-[![nl](https://img.shields.io/badge/lang-nl-green.svg)](Source/docs/README.nl.md)
-[![中文](https://img.shields.io/badge/lang-中文-orange.svg)](Source/docs/README.zh.md)
-[![fr](https://img.shields.io/badge/lang-fr-blue.svg)](Source/docs/README.fr.md)
-[![ar](https://img.shields.io/badge/lang-AR-orange.svg)](Source/docs/README.ar.md)
-[![pt-br](https://img.shields.io/badge/lang-pt--br-006400.svg)](Source/docs/README.pt-br.md)
-[![tr](https://img.shields.io/badge/lang-tr-e30a17.svg)](Source/docs/README.tr.md)
-
 <div align="center">
 
-<br>
+<p align="center">
+  <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&pause=1000&color=A7C7E7&center=true&vCenter=true&width=435&lines=Welcome+to+Atherson's+Hyprdots;The+Ultimate+Arch+Experience;Dynamic+Theming+Enabled;Built+for+Performance" alt="Typing SVG" />
+</p>
 
-<a href="#installation"><kbd> <br> Installation <br> </kbd></a>&ensp;&ensp;
-<a href="#updating"><kbd> <br> Updating <br> </kbd></a>&ensp;&ensp;
-<a href="#themes"><kbd> <br> Themes <br> </kbd></a>&ensp;&ensp;
-<a href="#styles"><kbd> <br> Styles <br> </kbd></a>&ensp;&ensp;
-<a href="CONTRIBUTING.md"><kbd> <br> Contributing <br> </kbd></a>&ensp;&ensp;
-<a href="KEYBINDINGS.md"><kbd> <br> Keybindings <br> </kbd></a>&ensp;&ensp;
-<a href="https://www.youtube.com/watch?v=2rWqdKU1vu8&list=PLt8rU_ebLsc5yEHUVsAQTqokIBMtx3RFY&index=1"><kbd> <br> Youtube <br> </kbd></a>&ensp;&ensp;
-<a href="https://hydeproject.pages.dev/"><kbd> <br> Wiki <br> </kbd></a>&ensp;&ensp;
-<a href="https://discord.gg/qWehcFJxPa"><kbd> <br> Discord <br> </kbd></a>
+[![Arch Linux](https://img.shields.io/badge/OS-Arch_Linux-1793d1?style=for-the-badge&logo=arch-linux&logoColor=white)](https://archlinux.org)
+[![Hyprland](https://img.shields.io/badge/WM-Hyprland-33ccff?style=for-the-badge&logo=hyprland&logoColor=white)](https://hyprland.org)
 
-</div><br><br>
+<p align="center">
+  <b>A sleek, automated, and highly customized Hyprland configuration for Arch Linux.</b><br>
+  <i>Featuring dynamic "Wallbash" theming, smooth animations, and a modern workflow.</i>
+</p>
 
-<div align="center">
-  <div style="display: flex; flex-wrap: nowrap; justify-content: center;">
-    <img src="Source/assets/archlinux.png" alt="Arch Linux" style="width: 10%; margin: 10px;"/>
-    <img src="Source/assets/cachyos.png" alt="CachyOS" style="width: 10%; margin: 10px;"/>
-    <img src="Source/assets/endeavouros.png" alt="EndeavourOS" style="width: 10%; margin: 10px;"/>
-    <img src="Source/assets/garuda.png" alt="Garuda" style="width: 10%; margin: 10px;"/>
-    <img src="Source/assets/nixos.png" alt="NixOS" style="width: 10%; margin: 10px;"/>
-  </div>
-</div>
-
-Check this out for the full note:
-[Journey to HyDE and beyond](./Hyprdots-to-HyDE.md)
-
-<!--
-<img alt="Dynamic JSON Badge" src="https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fdiscordapp.com%2Fapi%2Finvites%2FmT5YqjaJFh%3Fwith_counts%3Dtrue&query=%24.approximate_member_count&suffix=%20members&style=for-the-badge&logo=discord&logoSize=auto&label=The%20HyDe%20Project&labelColor=ebbcba&color=c79bf0">
-
-<img alt="Dynamic JSON Badge" src="https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fdiscordapp.com%2Fapi%2Finvites%2FmT5YqjaJFh%3Fwith_counts%3Dtrue&query=%24.approximate_presence_count&suffix=%20online&style=for-the-badge&logo=discord&logoSize=auto&label=The%20HyDe%20Project&labelColor=ebbcba&color=c79bf0">
--->
+---
 
 <https://github.com/prasanthrangan/hyprdots/assets/106020512/7f8fadc8-e293-4482-a851-e9c6464f5265>
 
-<br>
+</div>
 
-<a id="installation"></a>
-<img src="https://readme-typing-svg.herokuapp.com?font=Lexend+Giga&size=25&pause=1000&color=CCA9DD&vCenter=true&width=435&height=25&lines=INSTALLATION" width="450"/>
+## 🚀 Features at a Glance
+
+* **⚡ Blazing Fast:** Optimized for Arch Linux performance.
+* **🎨 Wallbash:** System colors automatically sync with your wallpaper.
+* **🧩 Modular:** Configurations are split for easy editing.
+* **🎮 NVIDIA Support:** Pre-configured environment variables for green-team users.
+* **🪄 Aesthetic:** Rounded corners, blurred surfaces, and custom Bezier curves.
 
 ---
 
-The installation script is designed for a minimal [Arch Linux](https://wiki.archlinux.org/title/Arch_Linux) install, but **may** work on some [Arch-based distros](https://wiki.archlinux.org/title/Arch-based_distributions).
-While installing HyDE alongside another [DE](https://wiki.archlinux.org/title/Desktop_environment)/[WM](https://wiki.archlinux.org/title/Window_manager) should work, due to it being a heavily customized setup, it **will** conflict with your [GTK](https://wiki.archlinux.org/title/GTK)/[Qt](https://wiki.archlinux.org/title/Qt) theming, [Shell](https://wiki.archlinux.org/title/Command-line_shell), [SDDM](https://wiki.archlinux.org/title/SDDM), [GRUB](https://wiki.archlinux.org/title/GRUB), etc. and is at your own risk.
+#### **INSTALLING ARCH LINUX**
 
-For NixOS support there is a separate project being maintained @ [Hydenix](https://github.com/richen604/hydenix/tree/main)
+Ensure youve downloaded the iso from <https://archlinux.org/> and mounted the [```.iso```] to a flash drive.
+Boot into the flash drive "live environment". You should see a prompt [```root@archiso```]. Now youre in the live environment!!!!!
 
-> [!IMPORTANT]
-> The install script will auto-detect an NVIDIA card and install nvidia-open-dkms drivers for your kernel.
-> For legacy cards [check this first](./Scripts/nvidia-db/)
-> Please ensure that your NVIDIA card supports dkms drivers in the list provided [here](https://wiki.archlinux.org/title/NVIDIA).
+Check if your connected to the internet. Ensure its stable. 
+##### ****ARCH REQUIRES AN INTERNET CONNECTION TO DOWNLOAD ITS PACKAGES.****
 
-> [!CAUTION]
-> The script modifies your `grub` or `systemd-boot` config to enable NVIDIA DRM.
+**ETHERNET**: If you're on ethernet, it should be straight foward. Type in the following command ```ping archlinux.org```.
 
-To install, execute the following commands:
 
-```shell
-sudo pacman -S --needed git base-devel
-git clone --depth 1 https://github.com/HyDE-Project/HyDE ~/HyDE
-cd ~/HyDE/Scripts
+**WIFI**: If you're on wifi, run the following command ```iwctl```
+
+- a) List your devices: ```device list``` (Usually, your device is named wlan0.)
+- b) Turn on the scan: ```station wlan0 scan```
+- c) List available networks: ```station wlan0 get-networks```
+- d) Connect to your SSID: ```station wlan0 connect YOUR_NETWORK_NAME```
+- **Tip: If you have a hidden SSID, the command is slightly different:**
+    ```station wlan0 connect-hidden YOUR_NETWORK_NAME```
+- e) Enter password: It will prompt you for the passphrase. Type it in and hit Enter.
+- f) Exit: Type exit or hit Ctrl+D to return to the standard root prompt.
+
+- **TO CONFIRM YOUR CONNECTION, ** Type in: ```ping -c 4 archlinux.org   ```
+
+---
+
+## DISK CONFIGURATIONS
+After connecting to the internet type in the following command to have a look at the partitions in your drives.
+
+This is the most ****"dangerous"**** part. Identify your drive using ```fdisk -l```. Usually, it’s ```/dev/sda``` or ```/dev/nvme0n1```.
+
+Use cfdisk ```/dev/sdX``` (replace X with your drive letter) to create:
+
+EFI Partition: ~512MB (Type: EFI System)
+
+Swap Partition: 4GB–8GB (Type: Linux swap)
+
+Root Partition: Remainder of the space (Type: Linux root x86-64)
+
+Format the partitions:
+
+EFI: ```mkfs.fat -F 32 /dev/sdX1```
+
+Swap: ```mkfs.swap /dev/sdX2``` press enter. Followed by ```swapon /dev/sdX2``.
+
+Root: ```mkfs.ext4 /dev/sdX3```
+
+
+---
+
+## 🛠️ Mounting and Base Installation
+Now we mount the root partition and install the core of the OS.
+
+Mount Root: ```mount /dev/sdX3 /mnt```
+
+Mount EFI: ```mount --mkdir /dev/sdX1 /mnt/boot```
+
+Install Base Packages:
+```pacstrap /mnt base linux linux-firmware nano grub efibootmgr networkmanager```
+
+---
+
+## 🛠️ Configuring the System
+Generate the filesystem table so your computer knows where your partitions are at boot.
+```genfstab -U /mnt >> /mnt/etc/fstab```
+
+
+You've now instaled archlinux base system. Lets now enter your system and configure it.
+
+
+Enter the new system (Chroot):
+```arch-chroot /mnt```
+
+Let's now configure your newly installed system:
+
+Inside the chroot, set your vitals:
+
+```Timezone: ln -sf /usr/share/zoneinfo/Region/City /etc/localtime```
+
+Localization: Edit ```/etc/locale.gen```, uncomment ```en_US.UTF-8 UTF-8```, by removing ```#``` at the begining of the line, then run ```locale-gen```.
+
+Hostname: ```echo "my-cool-pc" > /etc/hostname```
+
+Root Password: Type ```passwd``` and follow the prompts.
+
+
+ADDING A USER:
+ ```sudo useradd -m -G wheel -s /bin/bash username``` THEN ```sudo passwd username``` TO ADD A PASSWORD THE THE NEW USER. **Optional**, this is to give the user ```sudo``` privileges ```sudo EDITOR=nano visudo```, then uncomment the line ```%wheel ALL=(ALL) ALL```. If visudo fails with "no editor found" install **nano**, a terminal-based text editor by typing ```sudo pacman -S nano```.         
+
+---
+
+## 🛠️ Bootloader and Networking.
+Without a bootloader, your BIOS won't know Arch exists.
+
+Install GRUB:
+```grub-install --target=x86_64-efi --efi-directory=/boot --bootloader-id=GRUB```
+
+Generate Config:
+```grub-mkconfig -o /boot/grub/grub.cfg```
+
+Enable Internet on boot:
+```systemctl enable NetworkManager```
+
+
+## 6. The Finish Line
+Exit the chroot, unmount, and reboot:
+
+```exit```
+
+```umount -R /mnt```
+
+```reboot```
+
+
+## 🛠️ Prerequisites & Installation
+
+To get this environment running perfectly, follow these steps. We will start from a fresh Arch Linux install and chrooting into the newly installed system.
+
+### 1. Install hyprland and extras.
+
+```bash
+Sudo pacman -S hyprland wayland wayland-protocols xorg-xwayland kitty sddm git
+Sudo systemctl enable sddm.service
+```
+Now reboot the system.
+
+---
+
+### 2. Installing hyprdots.
+Lets now edit your ```hyprland.conf```, Press Windows + Q to open the terminal and type in 
+```bash
+nano .config/hypr/hyprland.conf
+```
+
+Git is required to clone the repository.
+```bash
+sudo pacman -Syu             # Update your system first
+sudo pacman -S git          # Install Git
+```
+
+Lets install **paru**, a package manager.
+```bash
+git clone https://aur.archlinux.org/paru.git
+cd paru/
+makepkg -si
+```
+Follow the instructions.
+
+if it fails run this ``` Sudo pacman -S --needed base-devel```
+
+---
+
+If there are no desktop, downloads, pictures .... directories, download and run this:
+```bash
+sudo pacman -S xdg-user-dirs
+xdg-user-dirs-update
+```
+---
+
+### 2. Cloning the repository
+Git is required to clone the repository.
+```bash
+git clone https://github.com/atherson/hyprdots
+cd hyprdots/Scripts
 ./install.sh
 ```
-
-> [!TIP]
-> You can also add any other apps you wish to install alongside HyDE to `Scripts/pkg_user.lst` and pass the file as a parameter to install it like so:
->
-> ```shell
-> ./install.sh pkg_user.lst
-> ```
-
-> [!IMPORTANT]
-> Refer your list from `Scripts/pkg_extra.lst`
-> or you can `cp Scripts/pkg_extra.lst Scripts/pkg_user.lst` if you wish to install all extra packages.
-
-<!--
-
-As a second install option, you can also use `Hyde-install`, which might be easier for some.
-View installation instructions for HyDE in [Hyde-cli - Usage](https://github.com/kRHYME7/Hyde-cli?tab=readme-ov-file#usage).
--->
-
-Please reboot after the install script completes and takes you to the SDDM login screen (or black screen) for the first time.
-For more details, please refer to the [installation wiki](https://github.com/HyDE-Project/HyDE/wiki/installation).
-
-<div align="right">
-  <br>
-  <a href="#-design-by-t2"><kbd> <br> 🡅 <br> </kbd></a>
-</div>
-
-<div align="right">
-  <br>
-  <a href="#-design-by-t2"><kbd> <br> 🡅 <br> </kbd></a>
-</div>
-
-<a id="contributing"></a>
-<img src="https://readme-typing-svg.herokuapp.com?font=Lexend+Giga&size=25&pause=1000&color=CCA9DD&vCenter=true&width=435&height=25&lines=CONTRIBUTING" width="450"/>
-
-To update HyDE, you will need to pull the latest changes from GitHub and restore the configs by running the following commands:
-
-> [!WARNING]
-> The following commands will discard any uncommitted local changes in the repository.
-
-```shell
-cd ~/HyDE/Scripts
-git fetch --update-shallow --depth 1 origin master
-git reset --hard origin/master
-./install.sh -r
-```
-
-> [!IMPORTANT]
-> Please note that any configurations you made will be overwritten if listed to be done so as listed by `Scripts/restore_cfg.psv`.
-> However, all replaced configs are backed up and may be recovered from in `~/.config/cfg_backups`.
-
-<!--
-As a second update option, you can use `Hyde restore ...`, which does have a better way of managing restore and backup options.
-For more details, you can refer to [Hyde-cli - dots management wiki](https://github.com/kRHYME7/Hyde-cli/wiki/Dots-Management).
--->
-
-<div align="right">
-  <br>
-  <a href="#-design-by-t2"><kbd> <br> 🡅 <br> </kbd></a>
-</div>
-
-<a id="hydevm"></a>
-<img src="https://readme-typing-svg.herokuapp.com?font=Lexend+Giga&size=25&pause=1000&color=CCA9DD&vCenter=true&width=435&height=25&lines=HYDEVM" width="450"/>
-
----
-
-HyDEVM is a script that allows you to run HyDE in a virtual machine for testing and development.
-
-## Quick Start
-
-### Arch Linux
-
+Follow the instructions in the installer.
+For your browser run this command after installing hyprdots:
 ```bash
-# Download and run (will auto-detect missing packages)
-curl -L https://raw.githubusercontent.com/HyDE-Project/HyDE/main/Scripts/hydevm/hydevm.sh -o hydevm
-chmod +x hydevm
-./hydevm
+sudo pacman -S flatpak
+flatpak install com.brave.Browser
 ```
-
-### NixOS (or Nix)
-
-```bash
-# Using flakes from HyDE repository
-nix run github:HyDE-Project/HyDE
-
-# Or if you have the repository cloned locally
-nix run .
-```
-
-For more details, please refer to the [HyDEVM README](Scripts/hydevm/README.md).
-
-<div align="right">
-  <br>
-  <a href="#-design-by-t2"><kbd> <br> 🡅 <br> </kbd></a>
-</div>
-
-<a id="themes"></a>
-<img src="https://readme-typing-svg.herokuapp.com?font=Lexend+Giga&size=25&pause=1000&color=CCA9DD&vCenter=true&width=435&height=25&lines=THEMES" width="450"/>
-
----
-
-All our official themes are stored in a separate repository, allowing users to install them using themepatcher.
-For more information, visit [HyDE-Project/hyde-themes](https://github.com/HyDE-Project/hyde-themes).
-
-<div align="center">
-  <table><tr><td>
-
-[![Catppuccin-Latte](https://placehold.co/130x30/dd7878/eff1f5?text=Catppuccin-Latte&font=Oswald)](https://github.com/HyDE-Project/hyde-themes/tree/Catppuccin-Latte)
-[![Catppuccin-Mocha](https://placehold.co/130x30/b4befe/11111b?text=Catppuccin-Mocha&font=Oswald)](https://github.com/HyDE-Project/hyde-themes/tree/Catppuccin-Mocha)
-[![Decay-Green](https://placehold.co/130x30/90ceaa/151720?text=Decay-Green&font=Oswald)](https://github.com/HyDE-Project/hyde-themes/tree/Decay-Green)
-[![Edge-Runner](https://placehold.co/130x30/fada16/000000?text=Edge-Runner&font=Oswald)](https://github.com/HyDE-Project/hyde-themes/tree/Edge-Runner)
-[![Frosted-Glass](https://placehold.co/130x30/7ed6ff/1e4c84?text=Frosted-Glass&font=Oswald)](https://github.com/HyDE-Project/hyde-themes/tree/Frosted-Glass)
-[![Graphite-Mono](https://placehold.co/130x30/a6a6a6/262626?text=Graphite-Mono&font=Oswald)](https://github.com/HyDE-Project/hyde-themes/tree/Graphite-Mono)
-[![Gruvbox-Retro](https://placehold.co/130x30/475437/B5CC97?text=Gruvbox-Retro&font=Oswald)](https://github.com/HyDE-Project/hyde-themes/tree/Gruvbox-Retro)
-[![Material-Sakura](https://placehold.co/130x30/f2e9e1/b4637a?text=Material-Sakura&font=Oswald)](https://github.com/HyDE-Project/hyde-themes/tree/Material-Sakura)
-[![Nordic-Blue](https://placehold.co/130x30/D9D9D9/476A84?text=Nordic-Blue&font=Oswald)](https://github.com/HyDE-Project/hyde-themes/tree/Nordic-Blue)
-[![Rosé-Pine](https://placehold.co/130x30/c4a7e7/191724?text=Rosé-Pine&font=Oswald)](https://github.com/HyDE-Project/hyde-themes/tree/Rose-Pine)
-[![Synth-Wave](https://placehold.co/130x30/495495/ff7edb?text=Synth-Wave&font=Oswald)](https://github.com/HyDE-Project/hyde-themes/tree/Synth-Wave)
-[![Tokyo-Night](https://placehold.co/130x30/7aa2f7/24283b?text=Tokyo-Night&font=Oswald)](https://github.com/HyDE-Project/hyde-themes/tree/Tokyo-Night)
-
-  </td></tr></table>
-</div>
-
-> [!TIP]
-> Everyone, including you can create, maintain, and share additional themes, all of which can be installed using themepatcher!
-> To create your own custom theme, please refer to the [theming wiki](https://github.com/prasanthrangan/hyprdots/wiki/Theming).
-> If you wish to have your hyde theme showcased, or you want to find some non-official themes, visit [kRHYME7/hyde-gallery](https://github.com/kRHYME7/hyde-gallery)!
-
-<div align="right">
-  <br>
-  <a href="#-design-by-t2"><kbd> <br> 🡅 <br> </kbd></a>
-</div>
-
-<a id="styles"></a>
-<img src="https://readme-typing-svg.herokuapp.com?font=Lexend+Giga&size=25&pause=1000&color=CCA9DD&vCenter=true&width=435&height=25&lines=STYLES" width="450"/>
-
----
-
-<div align="center"><table><tr>Theme Select</tr><tr><td>
-<img src="https://raw.githubusercontent.com/prasanthrangan/hyprdots/main/Source/assets/theme_select_1.png"/></td><td>
-<img src="https://raw.githubusercontent.com/prasanthrangan/hyprdots/main/Source/assets/theme_select_2.png"/></td></tr></table></div>
-
-<div align="center"><table><tr><td>Wallpaper Select</td><td>Launcher Select</td></tr><tr><td>
-<img src="https://raw.githubusercontent.com/prasanthrangan/hyprdots/main/Source/assets/walls_select.png"/></td><td>
-<img src="https://raw.githubusercontent.com/prasanthrangan/hyprdots/main/Source/assets/rofi_style_sel.png"/></td></tr>
-<tr><td>Wallbash Modes</td><td>Notification Action</td></tr><tr><td>
-<img src="https://raw.githubusercontent.com/prasanthrangan/hyprdots/main/Source/assets/wb_mode_sel.png"/></td><td>
-<img src="https://raw.githubusercontent.com/prasanthrangan/hyprdots/main/Source/assets/notif_action_sel.png"/></td></tr>
-</table></div>
-
-<div align="center"><table><tr>Rofi Launcher</tr><tr><td>
-<img src="https://raw.githubusercontent.com/prasanthrangan/hyprdots/main/Source/assets/rofi_style_1.png"/></td><td>
-<img src="https://raw.githubusercontent.com/prasanthrangan/hyprdots/main/Source/assets/rofi_style_2.png"/></td><td>
-<img src="https://raw.githubusercontent.com/prasanthrangan/hyprdots/main/Source/assets/rofi_style_3.png"/></td></tr><tr><td>
-<img src="https://raw.githubusercontent.com/prasanthrangan/hyprdots/main/Source/assets/rofi_style_4.png"/></td><td>
-<img src="https://raw.githubusercontent.com/prasanthrangan/hyprdots/main/Source/assets/rofi_style_5.png"/></td><td>
-<img src="https://raw.githubusercontent.com/prasanthrangan/hyprdots/main/Source/assets/rofi_style_6.png"/></td></tr><tr><td>
-<img src="https://raw.githubusercontent.com/prasanthrangan/hyprdots/main/Source/assets/rofi_style_7.png"/></td><td>
-<img src="https://raw.githubusercontent.com/prasanthrangan/hyprdots/main/Source/assets/rofi_style_8.png"/></td><td>
-<img src="https://raw.githubusercontent.com/prasanthrangan/hyprdots/main/Source/assets/rofi_style_9.png"/></td></tr><tr><td>
-<img src="https://raw.githubusercontent.com/prasanthrangan/hyprdots/main/Source/assets/rofi_style_10.png"/></td><td>
-<img src="https://raw.githubusercontent.com/prasanthrangan/hyprdots/main/Source/assets/rofi_style_11.png"/></td><td>
-<img src="https://raw.githubusercontent.com/prasanthrangan/hyprdots/main/Source/assets/rofi_style_12.png"/></td></tr>
-</table></div>
-
-<div align="center"><table><tr>Wlogout Menu</tr><tr><td>
-<img src="https://raw.githubusercontent.com/prasanthrangan/hyprdots/main/Source/assets/wlog_style_1.png"/></td><td>
-<img src="https://raw.githubusercontent.com/prasanthrangan/hyprdots/main/Source/assets/wlog_style_2.png"/></td></tr></table></div>
-
-<div align="center"><table><tr>Game Launcher</tr><tr><td>
-<img src="https://raw.githubusercontent.com/prasanthrangan/hyprdots/main/Source/assets/game_launch_1.png"/></td><td>
-<img src="https://raw.githubusercontent.com/prasanthrangan/hyprdots/main/Source/assets/game_launch_2.png"/></td><td>
-<img src="https://raw.githubusercontent.com/prasanthrangan/hyprdots/main/Source/assets/game_launch_3.png"/></td></tr></table></div>
-<div align="center"><table><tr><td>
-<img src="https://raw.githubusercontent.com/prasanthrangan/hyprdots/main/Source/assets/game_launch_4.png"/></td><td>
-<img src="https://raw.githubusercontent.com/prasanthrangan/hyprdots/main/Source/assets/game_launch_5.png"/></td></tr></table></div>
-
-
-
-<a id="star_history"></a>
-<img src="https://readme-typing-svg.herokuapp.com?font=Lexend+Giga&size=25&pause=1000&color=CCA9DD&vCenter=true&width=435&height=25&lines=STARS" width="450"/>
-                        
-[![Stargazers over time](https://starchart.cc/HyDE-Project/HyDE.svg?background=%231f2226&axis=%23ebbcba&line=%23c79bf0)](https://starchart.cc/HyDE-Project/HyDE)
-
-                    
-
----
-
-<a id="credits"></a>
-<img src="https://readme-typing-svg.herokuapp.com?font=Lexend+Giga&size=25&pause=1000&color=CCA9DD&vCenter=true&width=435&height=25&lines=THANK YOU!" width="450"/>
-
-
-- [See the full Credits page here](./CREDITS.md).
-
-
-
----
-
-<div align="right">
-  <br>
-  <a href="#-design-by-t2"><kbd> <br> 🡅 <br> </kbd></a>
-</div>
-
-<div align="right">
-  <sub>Last edited on: 27/02/2025<span id="last-edited"></span></sub>
-</div>
+Then use Windows + F to open brave browser.
