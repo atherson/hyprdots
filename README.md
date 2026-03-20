@@ -177,10 +177,7 @@ to give the new user a password. **Optional**, this is to give the user ```sudo`
 ```bash 
 sudo EDITOR=nano visudo
 ```
-then uncomment the line ```%wheel ALL=(ALL) ALL```. If this fails with "no editor found" install **nano**, a terminal-based text editor by typing 
-```bash
-sudo pacman -S nano
-```         
+then uncomment the line ```%wheel ALL=(ALL) ALL```.     
 
 ---
 
@@ -289,3 +286,31 @@ The default Modifier Key is `Super` (Windows Key).
 | **Theme Selector** | `Super` + `Shift` + `T` |
 | **Wallpaper Selector** | `Super` + `Shift` + `W` |
 | **Screenshot (Area)** | `Super` + `P` |
+
+
+💡 **Tip**: If trying to run the browser and isnt running, Or such an error pops out: 
+```bash
+bwrap: No permissions to creating new namespace, likely beacuse the kernel doesnt allow non-privileged user namespaces. On eg debian......
+```
+do this:
+
+```bash
+sudo nano /etc/sysctl.d/99-userns.conf
+```
+then add this: 
+```bash
+kernel.unprivileged_userns_clone=1
+```
+save and exit then apply with:
+```bash
+sudo sysctl --system
+```
+To verify run:
+```bash
+sysctl kernel.unprivieged_userns_clone
+```
+you should see:
+```kernel.unprivileged_userns_clone = 1```
+
+For any inquiries kindly reach out via [Contact Me](athersonfrank5@gmail.com)
+
