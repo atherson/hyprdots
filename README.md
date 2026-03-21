@@ -1,6 +1,11 @@
 <div align="center">
 
 <p align="center">
+  <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&pause=1000&color=A7C7E7&center=true&vCenter=true&width=435&lines=Officially+managed+by+:" alt="Typing SVG" />
+</p>
+[https://github.com/HyDE-Project/HyDE]
+
+<p align="center">
   <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&pause=1000&color=A7C7E7&center=true&vCenter=true&width=435&lines=Welcome+to+Atherson's+Hyprdots;The+Ultimate+Arch+Experience;Dynamic+Theming+Enabled;Built+for+Performance" alt="Typing SVG" />
 </p>
 
